@@ -1,0 +1,9 @@
+<p>Step 1 - Prepare wipes or toilet paper</p>
+<p>Step 2 - Type in your total income from 2019</p>
+<p>Step 3 - Feel free to cry while looking at taxes, use prepared wipes or toilet paper</p>
+<input type="text" [formControl]="formControl">
+<div *ngIf="(this.calculationOutput$ | async) as taxResults" class="calculation-output">
+    <p>Tax allowance: {{taxResults.taxAllowance}}</p>
+    <p>Total income tax: {{taxResults.incomeTax}}</p>
+    <p>Tax with allowance: {{taxResults.taxAfterAllowance}}</p>
+</div>
